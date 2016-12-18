@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<div class="main">
+
+
+
+	<h4 style="text-align: center"> Step 2 | Assessment Elements </h4>
+	Please select the factors you would like to assess. <br/><br/>
+	Note that we recommend not to exceed a total test duration of 45-60 minutes, as fatigue may otherwise distort results.
+	job - {{job.jobtitle}} - getJobtitle() - {{getJobtitle}} - summaryService.job - {{summaryService}} -
+	<br />
+		<br />
+		Sort by:
+			<select data-ng-model="orderProp">
+  				<option value="name">Alphabetical</option>
+  				<option value="duration">Duration</option>
+				<option value="category">Category</option>
+			</select>
+		<br /> <br />
+	<div class="frame">
+		<div class="left">
+			<table class="setup-table">
+				<tr>
+					<th style="padding-left: 2%; width: 5%; font-size: small">Selected</th>
+					<th style="width: 10%"></th>
+					<th style="float: left; padding-left: 2%; width: 20%; font-size: small">Test name</th>
+					<th style="float: left; padding-left: 2%; width: 40%; font-size: small">Description</th>
+					<th style="float: left; padding-left: 2%; width: 20%; font-size: small">Type</th>
+					<th style="float: left; font-size: small">Minutes</th>
+				</tr>
+				</table>
+			<form name="campaignForm2" ng-submit="submitForm()" action="#/setup-step3.php" method="post" >
+				<table class="setup-table" data-ng-repeat="test in tests | orderBy:orderProp">
+
+					<tr>
+					<td style="padding-left: 2%; width: 5%;"><input type="checkbox" name="test.id" data-ng-model="item.selected" data-ng-change="change(item)"></td>
+					<td style="width: 10%"><a href="#/tests/{{test.id}}" target="_blank"><img data-ng-src="{{test.imageUrl}}" alt="{{test.name}}" class="test-thumb"></a></td>
+					<td style="float: bottom; padding-left: 2%; width: 20%; font-size: small"><a href="#/tests/{{test.id}}" target="_blank">{{ test.name }}</a></td>
+					<td style="float: bottom; padding-left: 2%; width: 40%; font-size: x-small">{{ test.description }}</a></td>
+					<td style="float: bottom; padding-left: 2%; width: 20%; font-size: small">{{ test.type }}</a></td>
+					<td style="float: bottom; font-size: small">{{ test.duration }}</a></td>
+				</tr>
+				</table>
+				<a href="#/setup-step1" class="backbtn">Back</a>
+				<button type="submit" class="animatedbutton"> Next step </button>
+			</form>
+		</div>
+	<div class="right">
+		<table>
+            <tr>
+                <td>Campaign name:</td> <td> Hier: {{job}} </td>
+            </tr>
+            <tr>
+				<td>Available tests:</td> <td> {{tests.length}} </td>
+			</tr>
+			<tr>
+				<td>Job title:</td> <td>{{campaign.jobtitle}}</td>
+			</tr>
+			<tr>
+				<td>Selected:</td><td> {{selectedCounter}} </td>
+			</tr>
+			<tr>
+				<td>Assessment duration: </td><td> {{selectedDuration}} </td>
+			</tr>
+		</table>
+	</div>
+		<br />
+
+	</div>
+	</div>

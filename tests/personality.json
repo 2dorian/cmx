@@ -1,0 +1,22 @@
+
+{
+  "id": “muh”,
+  "name": “muhStyle",
+  "purpose": “bla bla”,
+  "description": "Lorem ipsum etcertater tarata loer ihsy weret kula",
+  "duration": 10,
+  "customization": {
+  		"items": false,
+      	"duration": true
+  },
+  "recommended": [
+  		“Wow,”,
+  		“ES”
+  		],
+  
+  "screenshots": [
+      "img/tests/social/screen1.jpg",
+      "img/tests/social/screen2.jpg",
+      "img/tests/social/screen3.jpg"
+  ]
+}

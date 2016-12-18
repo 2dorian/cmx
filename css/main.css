@@ -1,0 +1,181 @@
+body {
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #FCFCFC;
+    font-family: "Tahoma";
+    letter-spacing: 1px;
+}
+
+h2.top-panel {
+    margin-top: 3%;
+    float: right;
+    font-family: "Arial Black";
+    font-size: 12px;
+}
+
+.logo {
+    content:url('../img/logo.png');
+    width: 250px;
+}
+
+.my-summary {
+    position: absolute;
+    left: 490px; top: 490px;
+    width: 100px;
+    height: 100px;
+
+}
+
+h1.my-summary {
+    font-size: 12pt;
+    color: black;
+}
+
+.main {
+	font-weight: 500;
+	width: 80%;
+	margin: 10%;
+    border: 1px solid lightgrey;
+    padding: 5% 2% 5% 2%;
+    background-color: #FEFEFF;
+}
+
+
+
+.main-standard {
+    font-weight: normal;
+    font-size: smaller;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: right;
+}
+
+/* Styling of campaign setup form TABLE   */
+table.setup-table {
+    color: #365473;
+    font-size: inherit;
+    background-color: #D2E6FB;
+    width: 100%;
+    /* border: 1px solid #365473; */
+    border-radius: 3px;
+}
+
+tr.cmp-overview-title {
+    color: white;
+    font-size: large;
+    border-bottom: 1px solid #365473;
+    text-shadow: 1px 2px 5px rgba(150, 150, 150, 1);
+}
+
+tr.tr-campaigns {
+    height: 40px;
+}
+/* Styling of campaign setup PROCEED BUTTON   */
+.mainbtn-container {
+    margin-top: 5%;
+    height: 50%;
+    width: 100%;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+
+a.main-buttons {
+    display: block;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    background-color: #f9644c;
+    padding: 15px;
+    font-size: large;
+    text-shadow: 1px 2px 5px rgba(150, 150, 150, 1);
+    text-decoration: none;
+    color: whitesmoke;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a.main-buttons:hover {
+    background-color: #e24026;
+}
+
+a.main-buttons:visited {
+    color: white;
+}
+
+/* Test list */
+.test-thumb {
+	height: 50px;
+}
+
+/* Test Detail page */
+.test-thumbs {
+    height: 50px;
+}
+
+.test-logo {
+    height: 150px;
+}
+
+a.backbtn {
+    color:#6b6b6b;
+    background-color: #bebebe;
+    text-decoration: none;
+    display: block;
+    width: 8%;
+    text-align: center;
+    border: 1px solid #365473;
+    border-radius: 4px;
+    font-size: 12px;
+    margin:5px 5px 5px 0px;
+    padding:5px;
+    float:left;
+}
+
+a.backbtn:hover {
+    background-color: #cac9c9;
+}
+
+.animatedbutton {
+    position: relative;
+    margin:5px 5px 5px 0px;
+    background-color: #f9644c;
+    border: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 5px rgba(150, 150, 150, 1);
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #365473;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.animatedbutton:hover {
+    background-color: #e24026;
+}
+
+.animatedbutton:after {
+    content: "";
+    background: #e8b4ac;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.animatedbutton:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}

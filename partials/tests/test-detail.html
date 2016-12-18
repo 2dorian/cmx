@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<div class="main">
+	<h3>Cognometrix | User Panel</h3>
+	<img data-ng-src="{{mainImageUrl}}" class="test-logo"/>
+	<h2>{{ test.name }}</h2>
+	<p>{{ test.description }}</p>
+
+		Customization:
+		<ul> 
+  			<li>Test items: {{test.customization.items | checkmark }}</li>
+  			<li>Test duration: {{test.customization.duration |  checkmark }}</li>
+		</ul>
+
+	Recommended for:
+		<ul>
+  			<li data-ng-repeat="rec in test.recommended">{{rec}}</li>
+		</ul>
+		
+	Screenshots:
+	<ul class="test-thumbs">
+		<ul>
+  			<li data-ng-repeat="img in test.screenshots">
+				<img data-ng-src="{{img}}" ng-click="setImage(img)" class="test-thumbs">
+			</li>
+		</ul>
+	<button ng-click="hello('Controller is called')">Hello</button>
+</div>

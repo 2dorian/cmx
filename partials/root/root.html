@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<div class="main">
+Hello Mr. {{campaign.manager}}, <br/><br/>
+
+    <table class="setup-table" style="margin-top: 5%">
+        <tr class="cmp-overview-title">
+            <td style="padding: 2% 3% 0px 3%">Job title</td>
+            <td style="padding: 2% 3% 0px 3%">Vacancy ID</td>
+        </tr>
+        <tr class="tr-campaigns">
+            <td style="padding: 0px 3% 0px 3%">Dummy Job Title</td>
+            <td style="padding: 0px 3% 0px 3%">Dummy Job ID</td>
+            <td style="padding: 0px 3% 0px 3%"><a href="#/dummy-edit">EDIT</a></td>
+            <td style="padding: 0px 3% 0px 3%"><a href="#/dummy-delete">DELETE</a></td>
+        </tr>
+        <tr data-ng-repeat="campaign in campaigns" class="tr-campaigns">
+            <td style="padding: 0px 3% 0px 3%">{{ campaign.jobtitle }}</td>
+            <td style="padding: 0px 3% 0px 3%">{{ campaign.vacancyid }}</td>
+            <td style="padding: 0px 3% 0px 3%"><a href="#/{{campaign.Job_id}}">EDIT</a></td>
+            <td style="padding: 0px 3% 0px 3%"><a href="#/delete">DELETE</a></td>
+
+        </tr>
+
+    </table>
+    <div class="mainbtn-container">
+            <a href="#/setup-step1" class="main-buttons" > Create Assessment</a>
+            <a href="#/report" class="main-buttons" > Open Report </a>
+    </div>
+
+</div>

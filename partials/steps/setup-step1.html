@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<div class="main">
+
+    <h4 style="text-align: center"> Step 1 | Campaign Details </h4>
+    Please enter the following information: <br />
+    (Fields with a * are required)<br /><br />
+
+
+       <form name="campaignForm1" action="#/setup-step2" ng-submit="setJobtitle(campaign); submitForm(campaign);">
+           YO: {{job}}
+           <table class="setup-table">
+               <tr>
+                   <td>Job title: </td>
+                   <td><input type="text" name="jobtitle" placeholder="E.g. Senior Web Developer" ng-model="campaign.jobtitle"> <span style="color: #e24026; font-weight: bolder"> *</span></td>
+                   <td><sup class="main-standard">{{campaign.jobtitle}}</sup></td><br /><br />
+               <tr>
+                    <td><span ng-show="errorJobtitle">{{errorJobtitle}}</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+               <tr>
+                   <td>Vacancy ID: </td>
+                   <td><input type="text" name="vacancyid" ng-model="campaign.vacancyid"></td>
+                   <td style="width: 25%;"><sup class="main-standard">{{campaign.vacancyid}}</sup></td>
+               </tr>
+               <tr>
+                   <td>ID: </td>
+
+                   <td>{{campaign.vacancyid}}</td>
+               </tr>
+           </table><br /><br /><br />
+           <div class="mainbtn-container">
+               <a href="#/root" class="backbtn">Back</a>
+               <button class="animatedbutton" ng-click="setJobtitle(campaign.jobtitle); submitForm(campaign);" > Proceed </button>
+
+           </div>
+
+       </form><br /><br />
+
+
+
+    </div>
