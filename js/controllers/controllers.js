@@ -36,8 +36,8 @@ Step1Controller.$inject = ['$scope', '$routeParams', '$http', '$location', 'summ
 function Step1Controller($scope, $routeParams, $http, $location, summaryService){
 
                         //summary of campaign
-                       $scope.newJobtitle = function(campaign) {
-                            summaryService.setJobtitle(campaign.jobtitle);
+                       $scope.setJobtitle = function(jobtitle) {
+                            summaryService.setJobtitle(jobtitle);
                         };
 
                         //for path
